@@ -28,9 +28,7 @@ export class GraphComponent implements OnInit {
     ngOnInit(): void {
         // localhost:3000/
         const link = location.href;
-        const queryLink = link.substr(0, (link.length - 6));
-        console.log(`${link}`);
-        axios.get(`${queryLink}:9900/cars`, 
+        axios.get(`${link}cars`, 
         {headers: {"Content-Type": "application/json"}})
             .then(response => {
                 let result: any[] = response.data;
