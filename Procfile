@@ -1,1 +1,1 @@
-web: go run GoD3/backend/backend.go
+web: npm start
