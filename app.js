@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const helmet = require("helmet");
-const port =  9900;
+const port =  process.env.PORT || 9900;
 // setup the middleware
 app.use(cors());
 app.disable("x-powered-by");
